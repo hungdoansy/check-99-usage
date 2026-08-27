@@ -1,0 +1,42 @@
+{
+    "$schema": "./node_modules/oxlint/configuration_schema.json",
+    "plugins": ["typescript", "unicorn", "oxc", "react", "import", "jsx-a11y", "promise"],
+    "categories": {
+        "correctness": "error",
+        "suspicious": "warn",
+        "perf": "warn"
+    },
+    "env": {
+        "builtin": true,
+        "browser": true,
+        "es2024": true
+    },
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "no-debugger": "warn",
+        "no-unused-vars": [
+            "warn",
+            {
+                "args": "after-used",
+                "argsIgnorePattern": "^_",
+                "caughtErrorsIgnorePattern": "^_",
+                "ignoreRestSiblings": true
+            }
+        ],
+        "prefer-const": ["warn", { "destructuring": "all" }],
+        "no-useless-rename": "error",
+        "object-shorthand": "warn",
+        "array-callback-return": ["warn", { "allowImplicit": true, "checkForEach": true }],
+        "import/no-duplicates": "error",
+        "import/no-unassigned-import": ["error", { "allow": ["**/*.css"] }],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
+    },
+    "overrides": [
+        {
+            "files": ["vite.config.ts", "*.config.{js,cjs,mjs,ts}"],
+            "env": { "node": true }
+        }
+    ],
+    "ignorePatterns": ["dist/", "out/", "build/", "node_modules/"]
+}

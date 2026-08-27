@@ -1,0 +1,6 @@
+# pnpm 11 reads settings from this file, not package.json.
+# unrs-resolver's postinstall only downloads a native binary when no prebuilt
+# platform package matched. @unrs/resolver-binding-darwin-arm64 is installed and
+# loads, so the build is declined rather than approved.
+allowBuilds:
+    unrs-resolver: false

@@ -1,0 +1,19 @@
+{
+    "$schema": "./node_modules/oxfmt/configuration_schema.json",
+    "semi": false,
+    "tabWidth": 4,
+    "printWidth": 100,
+    "singleQuote": false,
+    "trailingComma": "es5",
+    "bracketSameLine": false,
+    "importOrder": [
+        "<THIRD_PARTY_MODULES>",
+        "^@/(assets|components|configs|constants|contexts|hooks|lib|stores|types)(/.+)?$",
+        "\\.(c|le|sc)ss$",
+        "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "sortPackageJson": false,
+    "ignorePatterns": ["task.md"]
+}
